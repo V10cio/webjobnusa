@@ -1,49 +1,54 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-800 via-indigo-600 to-blue-400 relative overflow-hidden">
-      {/* Optional background shapes */}
-      <div className="absolute top-0 left-0 w-full h-full">
+    <main className="min-h-screen bg-gradient-to-br from-blue-800 via-indigo-600 to-blue-400 text-white relative overflow-hidden">
+      {/* Header */}
+      <header className="flex justify-between items-center px-8 py-4 bg-white shadow-md sticky top-0 z-20">
+        <Link href="/" className="text-2xl font-bold text-indigo-700">JobNusa</Link>
+        <nav className="space-x-4 hidden md:flex">
+          <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
+          <Link href="/coming-soon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
+        </nav>
+      </header>
+
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/loadingScreen.png" // replace with actual background shapes if you have
+          src="/images/background.jpg"
           alt="Background"
           fill
           style={{ objectFit: 'cover', opacity: 0.2 }}
         />
       </div>
 
-      {/* Main Card */}
-      <div className="relative z-10 bg-gradient-to-bl from-indigo-300 via-blue-200 to-white rounded-3xl p-8 shadow-2xl max-w-sm w-[90%] text-center">
-        {/* Title */}
-        <h1 className="text-3xl font-bold text-black mb-4">JobNusa</h1>
+      {/* Main Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
+        <div className="bg-gradient-to-bl from-indigo-300 via-blue-200 to-white rounded-3xl p-8 shadow-2xl max-w-md w-full text-center space-y-6">
+          <h1 className="text-4xl font-extrabold text-gray-900">JobNusa</h1>
 
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <Image
-            src="/images/JobNusa.png" // replace with actual JobNusa logo
-            alt="JobNusa Logo"
-            width={150}
-            height={150}
-            className="rounded-md"
-          />
-        </div>
+          <div className="flex justify-center">
+            <Image
+              src="/images/JobNusa.png"
+              alt="JobNusa Logo"
+              width={130}
+              height={130}
+              className="rounded-md"
+            />
+          </div>
 
-        {/* Welcome Text */}
-        <h2 className="text-xl font-bold text-black mb-2">Welcome</h2>
-        <p className="text-black text-sm font-medium leading-relaxed">
-          Welcome to JobNusa <br />
-          Find The Best Career Opportunities <br />
-          For Your Future!
-        </p>
-
-        {/* Dot Indicators */}
-        <div className="mt-6 flex justify-center space-x-2">
-          <span className="w-3 h-3 bg-black rounded-full"></span>
-          <span className="w-3 h-3 bg-white border border-black rounded-full"></span>
-          <span className="w-3 h-3 bg-white border border-black rounded-full"></span>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-semibold text-gray-800">Welcome</h2>
+            <p className="text-sm text-gray-700 font-medium leading-relaxed">
+              Welcome to <strong>JobNusa</strong> — a modern job platform designed to connect local talent with national and global opportunities.
+            </p>
+          </div>
+          <div className="flex justify-center gap-4 pt-4">
+            <Link href="/features" className="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-800 transition">Explore Features</Link>
+          </div>
         </div>
       </div>
     </main>

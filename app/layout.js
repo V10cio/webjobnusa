@@ -18,20 +18,23 @@ export const metadata = {
   description: "Find the best career opportunities for your future!",
   icons: {
     icon: [
-      { url: '/images/JobNusa.png', type: 'image/png' }, // ✅ Replace with your JobNusa favicon path
+      { url: '/images/JobNusa.png', type: 'image/png' },
     ],
-    apple: { url: '/images/JobNusa.png', type: 'image/png' }, // ✅ Replace with your JobNusa apple icon path
+    apple: { url: '/images/JobNusa.png', type: 'image/png' },
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/images/JobNusa.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/JobNusa.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
