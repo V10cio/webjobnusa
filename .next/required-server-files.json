@@ -102,7 +102,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\valen\\OneDrive\\Documents\\hbd\\webjobnusa",
+    "outputFileTracingRoot": "D:\\Felix\\Semester4\\PAB2\\Proyek\\webjobnusa",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -160,7 +160,7 @@
       "middlewarePrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 3,
+      "cpus": 11,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -285,10 +285,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\valen\\OneDrive\\Documents\\hbd\\webjobnusa"
+      "root": "D:\\Felix\\Semester4\\PAB2\\Proyek\\webjobnusa"
     }
   },
-  "appDir": "C:\\Users\\valen\\OneDrive\\Documents\\hbd\\webjobnusa",
+  "appDir": "D:\\Felix\\Semester4\\PAB2\\Proyek\\webjobnusa",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
