@@ -28,17 +28,24 @@ export default function ComingSoon() {
           <p className="text-lg md:text-xl mb-6 text-white/90">
             Kami sedang menyiapkan platform pencarian kerja yang akan menghubungkan SDM lokal dengan peluang kerja global.
           </p>
-
-          <div className="flex justify-center gap-4 mt-6">
-            <a href="https://www.twitter.com/jobnusa" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-semibold transition">Twitter</a>
-            <a href="https://www.instagram.com/jobnusa" target="_blank" rel="noopener noreferrer" className="bg-white text-pink-600 hover:bg-pink-600 hover:text-white px-6 py-2 rounded-lg font-semibold transition">Instagram</a>
-          </div>
-
-          <div className="mt-6">
-            <Link href="/" className="text-white underline hover:text-indigo-200 transition">&larr; Kembali ke Beranda</Link>
-          </div>
         </div>
       </div>
+      <footer className="text-center py-8 bg-white shadow-inner">
+        <div className="space-x-4">
+          <Link
+            href="/x.com"
+            className="text-indigo-600 font-medium hover:underline"
+          >
+            X
+          </Link>
+          <Link
+            href="/instagram.com"
+            className="text-indigo-600 font-medium hover:underline"
+          >
+            Instagram
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }

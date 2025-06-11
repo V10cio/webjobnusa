@@ -11,7 +11,7 @@ export default function FeaturesPage() {
 
         <nav className="space-x-4 hidden md:flex">
           <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
-          <Link href="/coming-soon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
+          <Link href="/comingSoon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
         </nav>
       </header>
 
@@ -67,16 +67,16 @@ export default function FeaturesPage() {
       <footer className="text-center py-8 bg-white shadow-inner">
         <div className="space-x-4">
           <Link
-            href="/"
+            href="/x.com"
             className="text-indigo-600 font-medium hover:underline"
           >
-            Kembali ke Beranda
+            X
           </Link>
           <Link
-            href="/about"
+            href="/instagram.com"
             className="text-indigo-600 font-medium hover:underline"
           >
-            Tentang JobNusa
+            Instagram
           </Link>
         </div>
       </footer>

@@ -11,7 +11,7 @@ export default function Home() {
         <Link href="/" className="text-2xl font-bold text-indigo-700">JobNusa</Link>
         <nav className="space-x-4 hidden md:flex">
           <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
-          <Link href="/coming-soon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
+          <Link href="/comingSoon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
         </nav>
       </header>
 
@@ -51,6 +51,22 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <footer className="text-center py-8 bg-white shadow-inner">
+        <div className="space-x-4">
+          <Link
+            href="/x.com"
+            className="text-indigo-600 font-medium hover:underline"
+          >
+            X
+          </Link>
+          <Link
+            href="/instagram.com"
+            className="text-indigo-600 font-medium hover:underline"
+          >
+            Instagram
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
