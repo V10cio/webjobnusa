@@ -11,10 +11,9 @@ export default function FeaturesPage() {
 
         <nav className="space-x-4 hidden md:flex">
           <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
-          <Link href="/comingSoon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
+          <Link href="https://drive.google.com/uc?export=download&id=16BrGZBZmjFInH2GzeAh7s6urNLsOKPw2" className="text-gray-700 hover:underline hover:text-blue-500">Download</Link>
         </nav>
       </header>
-
       {/* Feature Section */}
       <section className="px-6 py-16 max-w-5xl mx-auto space-y-12">
         <div className="text-center">

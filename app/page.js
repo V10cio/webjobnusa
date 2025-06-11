@@ -11,7 +11,7 @@ export default function Home() {
         <Link href="/" className="text-2xl font-bold text-indigo-700">JobNusa</Link>
         <nav className="space-x-4 hidden md:flex">
           <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
-          <Link href="/comingSoon" className="text-gray-700 hover:underline hover:text-blue-500">Coming Soon</Link>
+          <Link href="https://drive.google.com/uc?export=download&id=16BrGZBZmjFInH2GzeAh7s6urNLsOKPw2" className="text-gray-700 hover:underline hover:text-blue-500">Download</Link>
         </nav>
       </header>
 
