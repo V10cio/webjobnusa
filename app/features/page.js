@@ -1,19 +1,36 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function FeaturesPage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 text-gray-800 font-sans">
       {/* Header */}
-      <header className="flex justify-between items-center px-8 py-4 bg-white shadow-md sticky top-0 z-20">
-        <Link href="/" className="text-2xl font-bold text-indigo-700">JobNusa</Link>
+      <header className="bg-white shadow-md sticky top-0 z-20">
+        <div className="flex justify-between items-center px-8 py-4">
+          <Link href="/" className="text-2xl font-bold text-indigo-700">JobNusa</Link>
 
-        <nav className="space-x-4 hidden md:flex">
-          <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
-          <Link href="https://drive.google.com/uc?export=download&id=16BrGZBZmjFInH2GzeAh7s6urNLsOKPw2" className="text-gray-700 hover:underline hover:text-blue-500">Download</Link>
-        </nav>
+          <nav className="hidden md:flex space-x-4">
+            <Link href="/about" className="text-gray-700 hover:underline hover:text-blue-500">About</Link>
+            <Link href="https://drive.google.com/uc?export=download&id=16BrGZBZmjFInH2GzeAh7s6urNLsOKPw2" className="text-gray-700 hover:underline hover:text-blue-500">Download</Link>
+          </nav>
+
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-indigo-700">
+            {isMobileMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <nav className="md:hidden px-8 pb-4 space-y-2">
+            <Link href="/about" className="block text-gray-700 hover:underline hover:text-blue-500">About</Link>
+            <Link href="https://drive.google.com/uc?export=download&id=16BrGZBZmjFInH2GzeAh7s6urNLsOKPw2" className="block text-gray-700 hover:underline hover:text-blue-500">Download</Link>
+          </nav>
+        )}
       </header>
+
       {/* Feature Section */}
       <section className="px-6 py-16 max-w-5xl mx-auto space-y-12">
         <div className="text-center">
@@ -51,10 +68,7 @@ export default function FeaturesPage() {
               desc: "Dapatkan notifikasi real-time dan diskusi langsung melalui komentar pada setiap posting.",
             },
           ].map((fitur, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 hover:shadow-xl"
-            >
+            <div key={idx} className="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 hover:shadow-xl">
               <h3 className="text-xl font-semibold text-indigo-700 mb-2">{fitur.title}</h3>
               <p className="text-gray-700">{fitur.desc}</p>
             </div>
@@ -62,21 +76,11 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Navigation Footer */}
+      {/* Footer */}
       <footer className="text-center py-8 bg-white shadow-inner">
         <div className="space-x-4">
-          <Link
-            href="/x.com"
-            className="text-indigo-600 font-medium hover:underline"
-          >
-            X
-          </Link>
-          <Link
-            href="/instagram.com"
-            className="text-indigo-600 font-medium hover:underline"
-          >
-            Instagram
-          </Link>
+          <Link href="/x.com" className="text-indigo-600 font-medium hover:underline">X</Link>
+          <Link href="/instagram.com" className="text-indigo-600 font-medium hover:underline">Instagram</Link>
         </div>
       </footer>
     </main>
